@@ -8,9 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class inscricaoGUI extends JFrame {
 
@@ -25,11 +30,13 @@ public class inscricaoGUI extends JFrame {
 	private JRadioButton rdbtnEnsinoMedio;
 	private JRadioButton rdbtnEnsinoSuperior;
 	private ButtonGroup grupoBotao;
+	private JButton btnLimpar;
+	private JButton btnEnviar;
 
 	
 	public inscricaoGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 405);
+		setBounds(100, 100, 450, 466);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,5 +89,45 @@ public class inscricaoGUI extends JFrame {
 		grupoBotao.add(rdbtnEnsinoMedio);
 		grupoBotao.add(rdbtnEnsinoSuperior);
 		
+		btnLimpar = new JButton("LIMPAR");
+		btnLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				limpar();			
+				
+			}
+		});
+		
+		btnLimpar.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnLimpar.setBounds(101, 358, 99, 23);
+		contentPane.add(btnLimpar);
+		
+		btnEnviar = new JButton("ENVIAR");
+		btnEnviar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String nome = textFieldNome.getText();
+				String cpf = textFieldCPF.getText();
+				if(nome.equals("") || cpf.equals(""))
+					JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "ALERTA", 4, null );
+				else
+				JOptionPane.showMessageDialog(null, "Dados cadastrados com sucesso!", "Confirmação", 1, null);
+			}
+		});
+		btnEnviar.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnEnviar.setBounds(214, 358, 108, 23);
+		contentPane.add(btnEnviar);
+		
+		setLocationRelativeTo(null);
+		setResizable(false);
+		setVisible(true);
+		
+		
+		
+		
 	}
+	
+	public void limpar() {
+		textFieldNome.setText("");
+		textFieldCPF.setText("");
+	}
+	
 }
