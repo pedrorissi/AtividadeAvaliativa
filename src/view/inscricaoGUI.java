@@ -16,6 +16,14 @@ public class inscricaoGUI extends JFrame {
 	private JPanel contentPane;
 	private JTextField textFieldNome;
 	private JTextField textFieldCPF;
+	private JLabel lbltitulo;
+	private JLabel lblNome;
+	private JLabel lblCpf;
+	private JLabel lblCargo;
+	private JRadioButton rdbtnFundamental;
+	private JRadioButton rdbtnEnsinoMedio;
+	private JRadioButton rdbtnEnsinoSuperior;
+	
 
 	
 	public inscricaoGUI() {
@@ -26,17 +34,17 @@ public class inscricaoGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("INSCRI\u00C7\u00C3O DE CANDIDATO");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
-		lblNewLabel.setBounds(101, 30, 243, 14);
-		contentPane.add(lblNewLabel);
+		lbltitulo = new JLabel("INSCRI\u00C7\u00C3O DE CANDIDATO");
+		lbltitulo.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lbltitulo.setBounds(101, 30, 243, 14);
+		contentPane.add(lbltitulo);
 		
 		textFieldNome = new JTextField();
 		textFieldNome.setBounds(101, 94, 210, 20);
 		contentPane.add(textFieldNome);
 		textFieldNome.setColumns(10);
 		
-		JLabel lblNome = new JLabel("NOME");
+		lblNome = new JLabel("NOME");
 		lblNome.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblNome.setBounds(101, 69, 46, 14);
 		contentPane.add(lblNome);
@@ -46,25 +54,25 @@ public class inscricaoGUI extends JFrame {
 		textFieldCPF.setBounds(101, 154, 210, 20);
 		contentPane.add(textFieldCPF);
 		
-		JLabel lblCpf = new JLabel("CPF");
+		lblCpf = new JLabel("CPF");
 		lblCpf.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblCpf.setBounds(101, 129, 46, 14);
 		contentPane.add(lblCpf);
 		
-		JLabel lblCargo = new JLabel("CARGO");
+		lblCargo = new JLabel("CARGO");
 		lblCargo.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblCargo.setBounds(101, 200, 83, 14);
 		contentPane.add(lblCargo);
 		
-		JRadioButton rdbtnFundamental = new JRadioButton("Professor Ensino Fundamental");
+		rdbtnFundamental = new JRadioButton("Professor Ensino Fundamental");
 		rdbtnFundamental.setBounds(101, 221, 193, 23);
 		contentPane.add(rdbtnFundamental);
 		
-		JRadioButton rdbtnEnsinoMedio = new JRadioButton("Professor Ensino M\u00E9dio");
+		rdbtnEnsinoMedio = new JRadioButton("Professor Ensino M\u00E9dio");
 		rdbtnEnsinoMedio.setBounds(101, 247, 167, 23);
 		contentPane.add(rdbtnEnsinoMedio);
 		
-		JRadioButton rdbtnEnsinoSuperior = new JRadioButton("Professor Ensino Superior");
+		rdbtnEnsinoSuperior = new JRadioButton("Professor Ensino Superior");
 		rdbtnEnsinoSuperior.setBounds(101, 273, 167, 23);
 		contentPane.add(rdbtnEnsinoSuperior);
 	}
