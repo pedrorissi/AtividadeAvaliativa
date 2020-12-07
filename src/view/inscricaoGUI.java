@@ -106,10 +106,11 @@ public class inscricaoGUI extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String nome = textFieldNome.getText();
 				String cpf = textFieldCPF.getText();
-				if(nome.equals("") || cpf.equals(""))
-					JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "ALERTA", 4, null );
-				else
-				JOptionPane.showMessageDialog(null, "Dados cadastrados com sucesso!", "Confirmação", 1, null);
+				if(nome.equals("") || cpf.equals("")) {
+					JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "ALERTA", 2, null );
+				}else {
+					JOptionPane.showMessageDialog(null, "Dados cadastrados com sucesso!", "Confirmação", 1, null);
+				}
 			}
 		});
 		btnEnviar.setFont(new Font("Tahoma", Font.BOLD, 13));
@@ -128,6 +129,7 @@ public class inscricaoGUI extends JFrame {
 	public void limpar() {
 		textFieldNome.setText("");
 		textFieldCPF.setText("");
+		grupoBotao.clearSelection();
 	}
 	
 }
