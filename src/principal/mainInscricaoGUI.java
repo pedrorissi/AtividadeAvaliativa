@@ -1,11 +1,11 @@
 package principal;
 
-import view.inscricaoGUI;
+import view.InscricaoGUI;
 
-public class mainInscricaoGUI {
+public class MainInscricaoGUI {
 	
 	public static void main(String[] args) {
-		inscricaoGUI tela = new inscricaoGUI();
+		InscricaoGUI tela = new InscricaoGUI();
 		tela.setVisible(true);
 	}
 }

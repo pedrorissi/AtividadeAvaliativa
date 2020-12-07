@@ -1,11 +1,11 @@
 package model;
 
-public class candidato {
+public class Candidato {
 	private String nome;
 	private String cpf;
 	private String cargo;
 	
-	public candidato(String nome, String cpf, String cargo) {
+	public Candidato(String nome, String cpf, String cargo) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;

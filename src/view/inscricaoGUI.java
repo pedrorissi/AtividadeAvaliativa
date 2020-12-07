@@ -17,7 +17,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class inscricaoGUI extends JFrame {
+public class InscricaoGUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textFieldNome;
@@ -34,7 +34,7 @@ public class inscricaoGUI extends JFrame {
 	private JButton btnEnviar;
 
 	
-	public inscricaoGUI() {
+	public InscricaoGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 466);
 		contentPane = new JPanel();
