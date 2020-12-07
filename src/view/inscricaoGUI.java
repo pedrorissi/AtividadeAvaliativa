@@ -3,6 +3,7 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -23,7 +24,7 @@ public class inscricaoGUI extends JFrame {
 	private JRadioButton rdbtnFundamental;
 	private JRadioButton rdbtnEnsinoMedio;
 	private JRadioButton rdbtnEnsinoSuperior;
-	
+	private ButtonGroup grupoBotao;
 
 	
 	public inscricaoGUI() {
@@ -75,5 +76,11 @@ public class inscricaoGUI extends JFrame {
 		rdbtnEnsinoSuperior = new JRadioButton("Professor Ensino Superior");
 		rdbtnEnsinoSuperior.setBounds(101, 273, 167, 23);
 		contentPane.add(rdbtnEnsinoSuperior);
+		
+		grupoBotao = new ButtonGroup();
+		grupoBotao.add(rdbtnFundamental);
+		grupoBotao.add(rdbtnEnsinoMedio);
+		grupoBotao.add(rdbtnEnsinoSuperior);
+		
 	}
 }
