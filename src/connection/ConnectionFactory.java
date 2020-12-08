@@ -21,7 +21,7 @@ public class ConnectionFactory {
 		return null;
 	}
 	
-	public static void closeConenection(Connection con) {
+	public static void closeConnection(Connection con) {
 		
 		if (con != null) {
 			try {

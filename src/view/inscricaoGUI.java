@@ -17,6 +17,12 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * @author Pedro Rissi
+ *
+ */
+
 public class InscricaoGUI extends JFrame {
 
 	private JPanel contentPane;
@@ -110,6 +116,7 @@ public class InscricaoGUI extends JFrame {
 					JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "ALERTA", 2, null );
 				}else {
 					JOptionPane.showMessageDialog(null, "Dados cadastrados com sucesso!", "Confirmação", 1, null);
+					limpar();
 				}
 			}
 		});
@@ -131,5 +138,7 @@ public class InscricaoGUI extends JFrame {
 		textFieldCPF.setText("");
 		grupoBotao.clearSelection();
 	}
+	
+	
 	
 }

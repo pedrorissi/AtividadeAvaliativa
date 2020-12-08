@@ -17,7 +17,7 @@ public class MainInscricaoGUI {
 			JOptionPane.showInternalMessageDialog(null, "Sucesso na conexão!!", "Sucesso", 1, null);
 		}
 		
-		//InscricaoGUI tela = new InscricaoGUI();
-		//tela.setVisible(true);
+		InscricaoGUI tela = new InscricaoGUI();
+		
 	}
 }
