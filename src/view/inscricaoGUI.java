@@ -7,6 +7,9 @@ import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.CandidatoController;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -95,6 +98,8 @@ public class InscricaoGUI extends JFrame {
 		grupoBotao.add(rdbtnEnsinoMedio);
 		grupoBotao.add(rdbtnEnsinoSuperior);
 		
+		
+		
 		btnLimpar = new JButton("LIMPAR");
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -112,11 +117,17 @@ public class InscricaoGUI extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String nome = textFieldNome.getText();
 				String cpf = textFieldCPF.getText();
+				int cargo = grupoBotao.getButtonCount();
 				if(nome.equals("") || cpf.equals("")) {
 					JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "ALERTA", 2, null );
 				}else {
-					JOptionPane.showMessageDialog(null, "Dados cadastrados com sucesso!", "Confirmação", 1, null);
-					limpar();
+					CandidatoController cControl = new CandidatoController(); 
+					if (cControl.cadastrar(nome, cpf, cargo)==1) {
+						JOptionPane.showMessageDialog(null, "Dados cadastrados com sucesso!", "Confirmação", 1, null);
+						limpar();
+					}
+					
+					
 				}
 			}
 		});

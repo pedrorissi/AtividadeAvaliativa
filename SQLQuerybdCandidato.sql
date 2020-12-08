@@ -1,5 +1,8 @@
 create table candidato(
 	 nome varchar,
 	 cpf char(11),
-	 cargo varchar
+	 cargo int
 );
+
+
+select * from candidato;

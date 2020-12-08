@@ -3,9 +3,9 @@ package model;
 public class Candidato {
 	private String nome;
 	private String cpf;
-	private String cargo;
+	private int cargo;
 	
-	public Candidato(String nome, String cpf, String cargo) {
+	public Candidato(String nome, String cpf, int cargo) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -29,11 +29,11 @@ public class Candidato {
 		this.cpf = cpf;
 	}
 
-	public String getCargo() {
+	public int getCargo() {
 		return cargo;
 	}
 
-	public void setCargo(String cargo) {
+	public void setCargo(int cargo) {
 		this.cargo = cargo;
 	}
 

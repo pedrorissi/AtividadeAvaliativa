@@ -24,7 +24,7 @@ public class CandidatoDAO {
 			stmt = con.prepareStatement(sqlInsert);
 			stmt.setString(1, c.getNome());
 			stmt.setString(2, c.getCpf());
-			stmt.setString(3, c.grupoBotao());
+			stmt.setInt(3, c.getCargo());
 			stmt.execute();
 			return 1;
 		} catch (SQLException e) {
